@@ -8,8 +8,8 @@
     <!-- initial-scale=1 : sets the initial zoom level when the page is first loaded by the browser.-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Include bootstrap CSS et JS minified files-->
-    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap.min.css"/>" media="screen">
-    <script src="<c:url value="/resources/bootstrap/js/bootstrap.min.js"/>"></script>
+    <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.min.css"/>" media="screen">
+    <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
     <title><spring:message code="header.label.appName"/></title>
 </head>
 <body>
