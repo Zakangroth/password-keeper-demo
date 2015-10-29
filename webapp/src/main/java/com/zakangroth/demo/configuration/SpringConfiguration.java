@@ -15,6 +15,7 @@ import javax.servlet.ServletRegistration;
  * <p/>
  * WebApplicationContext implementation looks for Spring configuration in classes annotated with @Configuration annotation.
  * setConfigLocation() method gets hint in which package(s) to look for them.
+ * <p/>
  * Project : password-keeper-demo
  * Created by Zakangroth on 28/10/2015.
  */

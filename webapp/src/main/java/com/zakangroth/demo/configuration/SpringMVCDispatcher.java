@@ -22,6 +22,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * @ComponentScan(basePackages = {“com.zakangroth.demo”}), this is the same as <context:component-scan base-package=”com.zakangroth.demo”/>
  * WebMvcConfigurerAdapter : This adds stub implementations from the WebMvcConfigurer interface which is used by @EnableWebMVC.
  * It also gives us a chance to override resources and the default handler.
+ * <p/>
  * Project : password-keeper-demo
  * Created by Zakangroth on 28/10/2015.
  */
