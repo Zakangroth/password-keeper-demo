@@ -10,9 +10,11 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>core</module>
+        <module>persistence</module>
         <module>webapp</module>
     </modules>
     <properties>
+        <module.version>1.0-SNAPSHOT</module.version>
         <junit.version>4.12</junit.version>
         <spring.version>4.1.5.RELEASE</spring.version>
         <spring.security.version>4.0.2.RELEASE</spring.security.version>
@@ -23,6 +25,13 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!-- Modules -->
+            <dependency>
+                <groupId>com.zakangroth.demo</groupId>
+                <artifactId>core</artifactId>
+                <version>${module.version}</version>
+            </dependency>
+
             <!-- Junit testing-->
             <dependency>
                 <groupId>junit</groupId>
