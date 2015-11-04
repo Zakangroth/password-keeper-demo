@@ -3,4 +3,4 @@
 *.iml
 
 #Generated files
-webapp/target/
+**/target/
