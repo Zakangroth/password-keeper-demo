@@ -1,4 +1,4 @@
-package com.zakangroth.demo.controller;
+package com.zakangroth.demo.web.controller;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

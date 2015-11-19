@@ -7,7 +7,5 @@ import com.zakangroth.demo.core.model.User;
  * Created by Zakangroth on 29/10/2015.
  */
 public interface UserService {
-    User findById(int id);
-
     User findByUsername(String username);
 }

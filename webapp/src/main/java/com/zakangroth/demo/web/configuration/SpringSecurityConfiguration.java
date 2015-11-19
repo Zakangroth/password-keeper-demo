@@ -1,11 +1,13 @@
-package com.zakangroth.demo.configuration;
+package com.zakangroth.demo.web.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
  * This configuration creates a Servlet Filter known as the springSecurityFilterChain which is responsible for all
@@ -20,6 +22,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+
+    /**
+     * We are using UserDetailService implementations for database-authentication.
+     */
+    @Autowired
+    @Qualifier("customUserDetailsService")
+    UserDetailsService userDetailsService;
+
     /**
      * Configures AuthenticationManagerBuilder with user credentials and allowed roles.
      * This AuthenticationManagerBuilder creates AuthenticationManager which is responsible for processing any
@@ -31,7 +41,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
      */
     @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("Zakangroth").password("abc123").roles("USER");
+        auth.userDetailsService(userDetailsService);
     }
 
     /**
@@ -45,9 +55,9 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         /*
-            In above configuration, we say that URL ‘/’ is not secured, anyone can access it.
-            URL ‘/home/**’ can only be accessed by someone who has USER role.
-            This code creates a custom login page with ‘/login’ url, which will accept ssoId as username and password
+            In above configuration, we say that URL ï¿½/ï¿½ is not secured, anyone can access it.
+            URL ï¿½/home/**ï¿½ can only be accessed by someone who has USER role.
+            This code creates a custom login page with ï¿½/loginï¿½ url, which will accept ssoId as username and password
             Http request parameters.
             We have also shown a call to csrf() which is optional as it is by default active in Spring. It is a
             Cross-site request forgery protection.

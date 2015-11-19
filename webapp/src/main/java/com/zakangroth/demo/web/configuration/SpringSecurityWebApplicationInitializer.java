@@ -1,4 +1,4 @@
-package com.zakangroth.demo.configuration;
+package com.zakangroth.demo.web.configuration;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

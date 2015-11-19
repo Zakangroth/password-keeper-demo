@@ -9,13 +9,13 @@ import javax.persistence.*;
  * Created by Zakangroth on 29/10/2015.
  */
 @Entity
-@Table(name = "USER_PROFILE")
+@Table(name = "user_profile")
 public class UserProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "TYPE", length = 15, unique = true, nullable = false)
+    @Column(name = "type", length = 15, unique = true, nullable = false)
     private String type = UserProfileType.USER.getUserProfileType();
 
     public int getId() {

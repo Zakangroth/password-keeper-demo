@@ -7,7 +7,5 @@ import com.zakangroth.demo.core.model.User;
  * Created by Zakangroth on 30/10/2015.
  */
 public interface UserDao {
-    User findById(int id);
-
     User findByUsername(String username);
 }

@@ -1,10 +1,11 @@
-package com.zakangroth.demo.controller;
+package com.zakangroth.demo.web.controller;
 
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -29,7 +30,6 @@ public class LoginController {
     public String loginPage() {
         return "login";
     }
-
 
     /**
      * User is logged out of spring security context.

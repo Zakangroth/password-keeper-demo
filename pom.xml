@@ -16,10 +16,12 @@
     </modules>
     <properties>
         <module.version>1.0-SNAPSHOT</module.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.log4j.version>1.7.12</slf4j.log4j.version>
         <junit.version>4.12</junit.version>
         <spring.version>4.1.5.RELEASE</spring.version>
         <spring.security.version>4.0.2.RELEASE</spring.security.version>
-        <hibernate.version>5.0.2.Final</hibernate.version>
+        <hibernate.version>4.3.10.Final</hibernate.version>
         <mysql.connector.version>5.1.37</mysql.connector.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <jstl.version>1.2</jstl.version>
@@ -44,6 +46,19 @@
                 <artifactId>service</artifactId>
                 <version>${module.version}</version>
             </dependency>
+
+            <!-- Log4J -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.log4j.version}</version>
+            </dependency>
+
 
             <!-- Junit testing-->
             <dependency>
@@ -97,6 +112,7 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>${hibernate.version}</version>
+                <exclusions></exclusions>
             </dependency>
 
             <!-- MySQL -->

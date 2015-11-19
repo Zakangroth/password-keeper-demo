@@ -1,4 +1,4 @@
-package com.zakangroth.demo.configuration;
+package com.zakangroth.demo.web.configuration;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +19,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  *
  * @Configuration : Let spring know this contains bean definitions.
  * @EnableWebMVC : This is the same as <mvc:annotation-driven/>
- * @ComponentScan(basePackages = {“com.zakangroth.demo”}), this is the same as <context:component-scan base-package=”com.zakangroth.demo”/>
+ * @ComponentScan(basePackages = {ï¿½com.zakangroth.demoï¿½}), this is the same as <context:component-scan base-package=ï¿½com.zakangroth.demoï¿½/>
  * WebMvcConfigurerAdapter : This adds stub implementations from the WebMvcConfigurer interface which is used by @EnableWebMVC.
  * It also gives us a chance to override resources and the default handler.
  * <p/>

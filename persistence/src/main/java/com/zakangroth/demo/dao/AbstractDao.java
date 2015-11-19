@@ -1,5 +1,6 @@
 package com.zakangroth.demo.dao;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +39,9 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 
     public void delete(T entity) {
         getSession().delete(entity);
+    }
+
+    protected Criteria createEntityCriteria(){
+        return getSession().createCriteria(persistentClass);
     }
 }

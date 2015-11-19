@@ -1,4 +1,4 @@
-package com.zakangroth.demo.configuration;
+package com.zakangroth.demo.web.configuration;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -31,7 +31,7 @@ public class SpringConfiguration implements WebApplicationInitializer {
 
     private AnnotationConfigWebApplicationContext getContext() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation("com.zakangroth.demo.configuration");
+        context.setConfigLocation("com.zakangroth.demo.web.configuration");
         return context;
     }
 }
